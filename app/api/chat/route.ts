@@ -37,9 +37,9 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { prompt } = body;
 
-    // Use gemini-2.5-flash which is extremely fast and accurate
+    // Use gemini-1.5-flash which has a much higher free-tier quota (1,500 requests per day)
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-1.5-flash',
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_PROMPT,
@@ -48,10 +48,19 @@ export async function POST(req: Request) {
     });
 
     return Response.json({ text: response.text });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gemini API Error:", error);
+    
+    // Specifically handle quota exceeded error
+    if (error?.status === 429 || error?.message?.includes("quota")) {
+      return Response.json(
+        { text: "System Warning [429]: Quota exceeded. The free AI tier has a limit. Please try again in a few minutes." },
+        { status: 429 }
+      );
+    }
+
     return Response.json(
-      { text: "System Error: The AI core is currently unavailable. Please ensure process.env.GEMINI_API_KEY is configured." },
+      { text: "System Error [500]: The AI core encountered an internal glitch. Please check your API configuration." },
       { status: 500 }
     );
   }
