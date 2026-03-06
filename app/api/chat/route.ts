@@ -23,6 +23,35 @@ Information about Anurag Goyal:
   4. "Customer Shopping Behaviour Analysis": A comprehensive data analytics project analyzing customer shopping behavior patterns. Implemented data cleaning, statistical analysis, and created interactive Power BI dashboards.
   5. "Personal Expense Tracker": A personal financial management tool helping users track, categorize, and visualize their daily expenses. Built with HTML, CSS, JavaScript.
 - **Academics**: B.E. in CSE (AI direction) at Chitkara University (Aug 2024 - Jul 2028).
+- **Certifications**:
+  1. Deloitte Data Analytics Job Simulation (Forage)
+  2. CS101 - The Computer Science Bootcamp (Open Source CHD)
+  3. Microsoft Certified: Azure Data Fundamentals (Microsoft)
+  4. GenAI Fundamentals (Disha AI)
+  5. Microsoft Certified: Azure Fundamentals (Microsoft)
+  6. Introduction to Cybersecurity (Cisco)
+  7. Introduction to Data Analytics (Meta)
+  8. Game Design: Art and Concepts (CalArts)
+  9. Define the Art & Concepts (CalArts)
+  10. Character Design for Video Games (CalArts)
+  11. World Design for Video Games (CalArts)
+  12. Story and Narrative Development (CalArts)
+  13. Introduction to Game Design (CalArts)
+  14. Design Thinking Specialization (Univ. of Virginia)
+  15. Experiencing Design (Univ. of Virginia)
+  16. Design Thinking: Discovery Tools (Univ. of Virginia)
+  17. Design Thinking: Ideas to Action (Univ. of Virginia)
+  18. Microsoft Certified: Azure AI Fundamentals (Microsoft)
+  19. Design Thinking: Insights to Inspiration (Univ. of Virginia)
+  20. AI and Disaster Management (DeepLearning.AI)
+  21. Natural Disaster Risk in Infrastructure (IDB)
+  22. Best LinkedIn Post (Open Source CHD)
+  23. Git and GitHub for Innovation (Open Source CHD)
+  24. Introduction to Generative AI (Google Cloud)
+  25. Python Bootcamp (LetsUpgrade)
+  26. CSS (Basic) (HackerRank)
+  27. Excel Bootcamp (LetsUpgrade)
+  28. C++ Bootcamp (LetsUpgrade)
 - **Links**: LinkedIn (anurag-goyal-885264304), GitHub (AnuragGoyal007), X/Twitter (logicalmind0891), Email (goyalanurag678@gmail.com).
 
 When formatting your answer, structure it like a clean terminal output:
@@ -37,7 +66,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { prompt } = body;
 
-    // Use gemini-1.5-flash which has a much higher free-tier quota (1,500 requests per day)
+    // Use gemini-2.5-flash-lite for improved performance and natural language handling
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash-lite',
       contents: prompt,

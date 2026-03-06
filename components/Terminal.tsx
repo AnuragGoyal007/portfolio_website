@@ -53,11 +53,12 @@ export default function Terminal() {
             <div className="text-emerald-400 mb-2">SYSTEM COMMANDS:</div>
             <div><span className="text-teal-400">about</span>    - Who is Anurag?</div>
             <div><span className="text-teal-400">skills</span>   - List my technical stack</div>
+            <div><span className="text-teal-400">certs</span>    - View my certifications</div>
             <div><span className="text-teal-400">contact</span>  - Get my social links</div>
             <div><span className="text-teal-400">clear</span>    - Clear the terminal logs</div>
             <div><span className="text-teal-400">sudo</span>     - Gain root access</div>
             <div className="mt-3 text-emerald-400">OR JUST TALK NATURALLY TO THE AI!</div>
-            <div className="text-slate-500 italic">E.g., "What are your best ML projects?"</div>
+            <div className="text-slate-500 italic">E.g., "Tell me about your certifications."</div>
           </div>
         );
         break;
@@ -74,6 +75,19 @@ export default function Terminal() {
             <span className="text-orange-400">SQL</span>
             <span className="text-purple-400">Next.js</span>
             <span className="text-emerald-600">Django</span>
+          </div>
+        );
+        break;
+      case "certs":
+        output = (
+          <div className="space-y-1">
+            <div>* Azure Fundamentals (Data, AI, Core) [Microsoft]</div>
+            <div>* GenAI Fundamentals [Google Cloud, Disha AI]</div>
+            <div>* Data Analytics [Meta, Forage]</div>
+            <div>* Cybersecurity [Cisco]</div>
+            <div>* Game Design [CalArts]</div>
+            <div>* Design Thinking [UVA]</div>
+            <div>* Python, Excel, C++ Bootcamps</div>
           </div>
         );
         break;
