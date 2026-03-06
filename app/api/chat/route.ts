@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
     // Use gemini-1.5-flash which has a much higher free-tier quota (1,500 requests per day)
     const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.5-flash-lite',
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_PROMPT,
@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     // Specifically handle quota exceeded error
     if (error?.status === 429 || error?.message?.includes("quota")) {
       return Response.json(
-        { text: "System Warning [1.5-FLASH]: Quota exceeded. Using free tier limit (15 requests/min). Please try again in 1 minute." },
+        { text: "System Warning [2.5-FLASH_LITE]: Quota exceeded. Using free tier limit (15 requests/min). Please try again in 1 minute." },
         { status: 429 }
       );
     }
