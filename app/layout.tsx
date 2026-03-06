@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CustomCursor from "@/components/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AnimatedBackground />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
