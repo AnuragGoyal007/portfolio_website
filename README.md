@@ -1,69 +1,52 @@
 # Anurag Goyal - Personal Portfolio
 
-![Portfolio Preview](./public/favicon.ico) <!-- You can add a screenshot later, I used the favicon for now -->
+![Portfolio Demo](./public/portfolio-demo.png)
 
-![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=for-the-badge&logo=next.js)
-![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Gemini_AI-2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
-
-A highly interactive, modern web portfolio built by **Anurag Goyal**, a 2nd-year Computer Science Engineering (AI Specialization) student at Chitkara University.
-
-This application is designed not just to list projects and resume items, but to demonstrate high-level web engineering skills, API integrations, and modern UI/UX principles.
+A high-performance personal portfolio showcasing expertise in **AI/ML** and **Full-stack Engineering**. Designed with a focus on interactivity, performance, and clean aesthetics.
 
 ## 🌟 Key Features
 
-- **Interactive AI Terminal (`/components/Terminal.tsx`)**: A fully functional command-line interface directly in the browser. It combines built-in mock commands (`ls`, `skills`) with a live integration using the **Google Gemini API** (`/api/chat`). Users can type natural language questions (e.g., *"What is your tech stack?"*) and receive factually restricted, structured responses.
-- **Magnetic Custom Cursor (`/components/CustomCursor.tsx`)**: An advanced, Framer Motion-powered spring cursor that follows the user's mouse and dynamically "snaps" to interactive elements across the site, swapping out the native OS cursor.
-- **Glassmorphism Design System**: Built seamlessly with Tailwind CSS, supporting elegant light and dark modes with responsive design perfectly implemented across all viewport sizes.
-- **Infinite Marquee Animations**: A smooth, infinitely looping tech-stack marquee utilizing keyframe animations.
+| Feature | Description |
+| :--- | :--- |
+| **AI Assistant** | An integrated terminal-style chatbot powered by **Gemini 2.5 Flash Lite**. It handles professional queries about skills, projects, and academics using natural language processing. |
+| **Precision Navigation** | A custom **Magnetic Cursor** system with spring physics, providing tactile feedback on interactive elements. |
+| **Responsive UI** | Premium glassmorphism design with seamless light/dark mode transitions and mobile-first responsiveness. |
+| **Dynamic Content** | Real-time project filtering and a smooth tech-stack marquee for a modern browsing experience. |
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router format)
-- **Language**: TypeScript
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **AI Core**: `@google/genai` (Gemini 2.5 Flash model)
+This project leverages the modern web ecosystem to ensure scalability and speed:
+- **Framework**: Next.js 15 (App Router Architecture)
+- **Language**: TypeScript (Strict Type Safety)
+- **Styling**: Tailwind CSS 4.0 & Framer Motion for high-fidelity animations
+- **AI Core**: Google Generative AI (Direct API Integration via Backend Routes)
+- **Analytics**: Vercel Web Analytics for performance monitoring
 
-## 🚀 Getting Started Locally
+## � Project Structure
 
-To run this project locally on your machine:
+- `app/`: Routing logic and AI server-side endpoints.
+- `components/`: Reusable UI modules (Terminal, Cursor, Navbar, etc.).
+- `public/`: Static assets (Resume, images, and brand assets).
 
-1. **Clone the repository:**
+## � Getting Started
+
+1. **Clone & Install**:
    ```bash
-   git clone https://github.com/AnuragGoyal007/my-portfolio.git
-   cd my-portfolio
+   git clone https://github.com/AnuragGoyal007/portfolio_website.git
+   cd my-portfolio && npm install
    ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Set up Environment Variables:**
-   - Create a file named `.env.local` in the root directory.
-   - Add your Google Gemini API key:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Run the development server:**
+2. **Environment**: Add `GEMINI_API_KEY=your_key` to a `.env.local` file.
+3. **Run**:
    ```bash
    npm run dev
    ```
 
-5. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
+## 📬 Connect
 
-## 🔗 Connect with me
-
-- **LinkedIn**: [in/anurag-goyal-885264304](https://www.linkedin.com/in/anurag-goyal-885264304)
-- **X (Twitter)**: [@logicalmind0891](https://x.com/logicalmind0891)
+- **LinkedIn**: [Anurag Goyal](https://www.linkedin.com/in/anurag-goyal-885264304)
 - **GitHub**: [@AnuragGoyal007](https://github.com/AnuragGoyal007)
+- **Twitter/X**: [@logicalmind0891](https://x.com/logicalmind0891)
 - **Email**: [goyalanurag678@gmail.com](mailto:goyalanurag678@gmail.com)
 
 ---
-*If you find this repository interesting, feel free to give it a ⭐!*
+*Built for the next generation of AI-enabled portfolios.*
