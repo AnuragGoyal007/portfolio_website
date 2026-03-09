@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Terminal as TerminalIcon, Maximize2, X, Minus } from "lucide-react";
-
+import { ALL_CERTIFICATES } from "@/data/certificates";
+import { PROJECTS } from "@/data/projects";
 type CommandHistory = {
   command: string;
   output: React.ReactNode;
@@ -53,6 +54,7 @@ export default function Terminal() {
             <div className="text-emerald-400 mb-2">SYSTEM COMMANDS:</div>
             <div><span className="text-teal-400">about</span>    - Who is Anurag?</div>
             <div><span className="text-teal-400">skills</span>   - List my technical stack</div>
+            <div><span className="text-teal-400">projects</span> - Browse featured works</div>
             <div><span className="text-teal-400">certs</span>    - View my certifications</div>
             <div><span className="text-teal-400">contact</span>  - Get my social links</div>
             <div><span className="text-teal-400">clear</span>    - Clear the terminal logs</div>
@@ -78,16 +80,26 @@ export default function Terminal() {
           </div>
         );
         break;
+      case "projects":
+        output = (
+          <div className="space-y-2 max-h-48 pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-emerald-500/20 scrollbar-track-transparent">
+            {PROJECTS.map((p, i) => (
+              <div key={i} className="text-blue-400/90 hover:text-blue-300 transition-colors">
+                <div className="font-bold text-blue-300">&gt; {p.title}</div>
+                <div className="text-slate-400 text-xs pl-4">- {p.tech.join(" | ")}</div>
+              </div>
+            ))}
+          </div>
+        );
+        break;
       case "certs":
         output = (
-          <div className="space-y-1">
-            <div>* Azure Fundamentals (Data, AI, Core) [Microsoft]</div>
-            <div>* GenAI Fundamentals [Google Cloud, Disha AI]</div>
-            <div>* Data Analytics [Meta, Forage]</div>
-            <div>* Cybersecurity [Cisco]</div>
-            <div>* Game Design [CalArts]</div>
-            <div>* Design Thinking [UVA]</div>
-            <div>* Python, Excel, C++ Bootcamps</div>
+          <div className="space-y-1 max-h-32 pr-2 overflow-y-auto scrollbar-thin scrollbar-thumb-emerald-500/20 scrollbar-track-transparent">
+            {ALL_CERTIFICATES.map((c, i) => (
+              <div key={i} className="text-emerald-400/90 hover:text-emerald-300 transition-colors">
+                * {c.name} <span className="text-emerald-600 dark:text-emerald-500/50">[{c.issuer}]</span>
+              </div>
+            ))}
           </div>
         );
         break;

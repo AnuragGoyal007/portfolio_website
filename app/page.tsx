@@ -9,36 +9,8 @@ import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import { ChevronDown, Download, ExternalLink, MapPin, Mail, Phone, ChevronRight, Sparkles, Building2, Code2, GraduationCap, FolderGit2, Terminal, Layers, BarChart, Server, Brain, Award, Github } from "lucide-react";
 
-const ALL_CERTIFICATES = [
-  { name: "Deloitte Data Analytics Job Simulation", issuer: "Forage", role: "Simulation", logo: "https://www.google.com/s2/favicons?domain=theforage.com&sz=128", st: { line: "bg-emerald-500/50 group-hover:bg-emerald-400", bg: "group-hover:bg-emerald-500/10 group-hover:border-emerald-500/20", txt: "group-hover:text-emerald-700 dark:hover:text-emerald-600 dark:text-emerald-400", badge: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-600 dark:text-emerald-400 border-emerald-500/20" } },
-  { name: "CS101 - The Computer Science Bootcamp", issuer: "Open Source CHD", role: "Bootcamp", logo: "https://ui-avatars.com/api/?name=Open+Source+CHD&background=0d9488&color=fff", st: { line: "bg-teal-500/50 group-hover:bg-teal-400", bg: "group-hover:bg-teal-500/10 group-hover:border-teal-500/20", txt: "group-hover:text-teal-700 dark:hover:text-teal-600 dark:text-teal-400", badge: "bg-teal-500/10 text-teal-700 dark:text-teal-600 dark:text-teal-400 border-teal-500/20" } },
-  { name: "Microsoft Certified: Azure Data Fundamentals", issuer: "Microsoft", role: "Expert", logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128", st: { line: "bg-cyan-500/50 group-hover:bg-cyan-400", bg: "group-hover:bg-cyan-500/10 group-hover:border-cyan-500/20", txt: "group-hover:text-cyan-600 dark:group-hover:text-cyan-600 dark:text-cyan-400", badge: "bg-cyan-500/10 text-cyan-700 dark:text-cyan-600 dark:text-cyan-400 border-cyan-500/20" } },
-  { name: "GenAI Fundamentals", issuer: "Disha AI", role: "Foundational", logo: "https://ui-avatars.com/api/?name=Disha+AI&background=a855f7&color=fff", st: { line: "bg-purple-500/50 group-hover:bg-purple-400", bg: "group-hover:bg-purple-500/10 group-hover:border-purple-500/20", txt: "group-hover:text-purple-700 dark:hover:text-purple-600 dark:text-purple-400", badge: "bg-purple-500/10 text-purple-700 dark:text-purple-600 dark:text-purple-400 border-purple-500/20" } },
-  { name: "Microsoft Certified: Azure Fundamentals", issuer: "Microsoft", role: "Professional", logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128", st: { line: "bg-sky-500/50 group-hover:bg-sky-400", bg: "group-hover:bg-sky-500/10 group-hover:border-sky-500/20", txt: "group-hover:text-sky-600 dark:group-hover:text-sky-400", badge: "bg-sky-500/10 text-sky-700 dark:text-sky-400 border-sky-500/20" } },
-  { name: "Introduction to Cybersecurity", issuer: "Cisco", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=cisco.com&sz=128", st: { line: "bg-rose-500/50 group-hover:bg-rose-400", bg: "group-hover:bg-rose-500/10 group-hover:border-rose-500/20", txt: "group-hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400", badge: "bg-rose-500/10 text-rose-700 dark:text-rose-600 dark:text-rose-400 border-rose-500/20" } },
-  { name: "Introduction to Data Analytics", issuer: "Meta", role: "Professional", logo: "https://www.google.com/s2/favicons?domain=meta.com&sz=128", st: { line: "bg-blue-500/50 group-hover:bg-blue-400", bg: "group-hover:bg-blue-500/10 group-hover:border-blue-500/20", txt: "group-hover:text-blue-700 dark:hover:text-blue-600 dark:text-blue-400", badge: "bg-blue-500/10 text-blue-700 dark:text-blue-600 dark:text-blue-400 border-blue-500/20" } },
-  { name: "Game Design: Art and Concepts", issuer: "CalArts", role: "Specialization", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-orange-500/50 group-hover:bg-orange-400", bg: "group-hover:bg-orange-500/10 group-hover:border-orange-500/20", txt: "group-hover:text-orange-600 dark:group-hover:text-orange-600 dark:text-orange-400", badge: "bg-orange-500/10 text-orange-700 dark:text-orange-600 dark:text-orange-400 border-orange-500/20" } },
-  { name: "Define the Art & Concepts", issuer: "CalArts", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-amber-500/50 group-hover:bg-amber-400", bg: "group-hover:bg-amber-500/10 group-hover:border-amber-500/20", txt: "group-hover:text-amber-600 dark:group-hover:text-amber-600 dark:text-amber-400", badge: "bg-amber-500/10 text-amber-700 dark:text-amber-600 dark:text-amber-400 border-amber-500/20" } },
-  { name: "Character Design for Video Games", issuer: "CalArts", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-yellow-500/50 group-hover:bg-yellow-400", bg: "group-hover:bg-yellow-500/10 group-hover:border-yellow-500/20", txt: "group-hover:text-yellow-600 dark:group-hover:text-yellow-600 dark:text-yellow-400", badge: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-600 dark:text-yellow-400 border-yellow-500/20" } },
-  { name: "World Design for Video Games", issuer: "CalArts", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-orange-500/50 group-hover:bg-orange-400", bg: "group-hover:bg-orange-500/10 group-hover:border-orange-500/20", txt: "group-hover:text-orange-600 dark:group-hover:text-orange-600 dark:text-orange-400", badge: "bg-orange-500/10 text-orange-700 dark:text-orange-600 dark:text-orange-400 border-orange-500/20" } },
-  { name: "Story and Narrative Development", issuer: "CalArts", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-amber-500/50 group-hover:bg-amber-400", bg: "group-hover:bg-amber-500/10 group-hover:border-amber-500/20", txt: "group-hover:text-amber-600 dark:group-hover:text-amber-600 dark:text-amber-400", badge: "bg-amber-500/10 text-amber-700 dark:text-amber-600 dark:text-amber-400 border-amber-500/20" } },
-  { name: "Introduction to Game Design", issuer: "CalArts", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=calarts.edu&sz=128", st: { line: "bg-yellow-500/50 group-hover:bg-yellow-400", bg: "group-hover:bg-yellow-500/10 group-hover:border-yellow-500/20", txt: "group-hover:text-yellow-600 dark:group-hover:text-yellow-600 dark:text-yellow-400", badge: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-600 dark:text-yellow-400 border-yellow-500/20" } },
-  { name: "Design Thinking Specialization", issuer: "Univ. of Virginia", role: "Specialization", logo: "https://www.google.com/s2/favicons?domain=virginia.edu&sz=128", st: { line: "bg-amber-500/50 group-hover:bg-amber-400", bg: "group-hover:bg-amber-500/10 group-hover:border-amber-500/20", txt: "group-hover:text-amber-600 dark:group-hover:text-amber-600 dark:text-amber-400", badge: "bg-amber-500/10 text-amber-700 dark:text-amber-600 dark:text-amber-400 border-amber-500/20" } },
-  { name: "Experiencing Design", issuer: "Univ. of Virginia", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=virginia.edu&sz=128", st: { line: "bg-yellow-500/50 group-hover:bg-yellow-400", bg: "group-hover:bg-yellow-500/10 group-hover:border-yellow-500/20", txt: "group-hover:text-yellow-600 dark:group-hover:text-yellow-600 dark:text-yellow-400", badge: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-600 dark:text-yellow-400 border-yellow-500/20" } },
-  { name: "Design Thinking: Discovery Tools", issuer: "Univ. of Virginia", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=virginia.edu&sz=128", st: { line: "bg-orange-500/50 group-hover:bg-orange-400", bg: "group-hover:bg-orange-500/10 group-hover:border-orange-500/20", txt: "group-hover:text-orange-600 dark:group-hover:text-orange-600 dark:text-orange-400", badge: "bg-orange-500/10 text-orange-700 dark:text-orange-600 dark:text-orange-400 border-orange-500/20" } },
-  { name: "Design Thinking: Ideas to Action", issuer: "Univ. of Virginia", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=virginia.edu&sz=128", st: { line: "bg-amber-500/50 group-hover:bg-amber-400", bg: "group-hover:bg-amber-500/10 group-hover:border-amber-500/20", txt: "group-hover:text-amber-600 dark:group-hover:text-amber-600 dark:text-amber-400", badge: "bg-amber-500/10 text-amber-700 dark:text-amber-600 dark:text-amber-400 border-amber-500/20" } },
-  { name: "Microsoft Certified: Azure AI Fundamentals", issuer: "Microsoft", role: "Expert", logo: "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128", st: { line: "bg-blue-500/50 group-hover:bg-blue-400", bg: "group-hover:bg-blue-500/10 group-hover:border-blue-500/20", txt: "group-hover:text-blue-700 dark:hover:text-blue-600 dark:text-blue-400", badge: "bg-blue-500/10 text-blue-700 dark:text-blue-600 dark:text-blue-400 border-blue-500/20" } },
-  { name: "Design Thinking: Insights to Inspiration", issuer: "Univ. of Virginia", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=virginia.edu&sz=128", st: { line: "bg-yellow-500/50 group-hover:bg-yellow-400", bg: "group-hover:bg-yellow-500/10 group-hover:border-yellow-500/20", txt: "group-hover:text-yellow-600 dark:group-hover:text-yellow-600 dark:text-yellow-400", badge: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-600 dark:text-yellow-400 border-yellow-500/20" } },
-  { name: "AI and Disaster Management", issuer: "DeepLearning.AI", role: "Specialization", logo: "https://www.google.com/s2/favicons?domain=deeplearning.ai&sz=128", st: { line: "bg-purple-500/50 group-hover:bg-purple-400", bg: "group-hover:bg-purple-500/10 group-hover:border-purple-500/20", txt: "group-hover:text-purple-700 dark:hover:text-purple-600 dark:text-purple-400", badge: "bg-purple-500/10 text-purple-700 dark:text-purple-600 dark:text-purple-400 border-purple-500/20" } },
-  { name: "Natural Disaster Risk in Infrastructure", issuer: "IDB", role: "Coursework", logo: "https://www.google.com/s2/favicons?domain=iadb.org&sz=128", st: { line: "bg-indigo-500/50 group-hover:bg-indigo-400", bg: "group-hover:bg-indigo-500/10 group-hover:border-indigo-500/20", txt: "group-hover:text-indigo-600 dark:group-hover:text-indigo-600 dark:text-indigo-400", badge: "bg-indigo-500/10 text-indigo-700 dark:text-indigo-600 dark:text-indigo-400 border-indigo-500/20" } },
-  { name: "Best LinkedIn Post", issuer: "Open Source CHD", role: "Achievement", logo: "https://ui-avatars.com/api/?name=Open+Source+CHD&background=0d9488&color=fff", st: { line: "bg-teal-500/50 group-hover:bg-teal-400", bg: "group-hover:bg-teal-500/10 group-hover:border-teal-500/20", txt: "group-hover:text-teal-700 dark:hover:text-teal-600 dark:text-teal-400", badge: "bg-teal-500/10 text-teal-700 dark:text-teal-600 dark:text-teal-400 border-teal-500/20" } },
-  { name: "Git and GitHub for Innovation", issuer: "Open Source CHD", role: "Technical", logo: "https://ui-avatars.com/api/?name=Open+Source+CHD&background=0d9488&color=fff", st: { line: "bg-emerald-500/50 group-hover:bg-emerald-400", bg: "group-hover:bg-emerald-500/10 group-hover:border-emerald-500/20", txt: "group-hover:text-emerald-700 dark:hover:text-emerald-600 dark:text-emerald-400", badge: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-600 dark:text-emerald-400 border-emerald-500/20" } },
-  { name: "Introduction to Generative AI", issuer: "Google Cloud", role: "Foundational", logo: "https://www.google.com/s2/favicons?domain=google.com&sz=128", st: { line: "bg-red-500/50 group-hover:bg-red-400", bg: "group-hover:bg-red-500/10 group-hover:border-red-500/20", txt: "group-hover:text-red-600 dark:group-hover:text-red-400", badge: "bg-red-500/10 text-red-700 dark:text-red-400 border-red-500/20" } },
-  { name: "Python Bootcamp", issuer: "LetsUpgrade", role: "Bootcamp", logo: "https://www.google.com/s2/favicons?domain=letsupgrade.in&sz=128", st: { line: "bg-pink-500/50 group-hover:bg-pink-400", bg: "group-hover:bg-pink-500/10 group-hover:border-pink-500/20", txt: "group-hover:text-pink-600 dark:group-hover:text-pink-600 dark:text-pink-400", badge: "bg-pink-500/10 text-pink-700 dark:text-pink-600 dark:text-pink-400 border-pink-500/20" } },
-  { name: "CSS (Basic)", issuer: "HackerRank", role: "Assessment", logo: "https://www.google.com/s2/favicons?domain=hackerrank.com&sz=128", st: { line: "bg-lime-500/50 group-hover:bg-lime-400", bg: "group-hover:bg-lime-500/10 group-hover:border-lime-500/20", txt: "group-hover:text-lime-600 dark:group-hover:text-lime-600 dark:text-lime-400", badge: "bg-lime-500/10 text-lime-700 dark:text-lime-600 dark:text-lime-400 border-lime-500/20" } },
-  { name: "Excel Bootcamp", issuer: "LetsUpgrade", role: "Bootcamp", logo: "https://www.google.com/s2/favicons?domain=letsupgrade.in&sz=128", st: { line: "bg-pink-500/50 group-hover:bg-pink-400", bg: "group-hover:bg-pink-500/10 group-hover:border-pink-500/20", txt: "group-hover:text-pink-600 dark:group-hover:text-pink-600 dark:text-pink-400", badge: "bg-pink-500/10 text-pink-700 dark:text-pink-600 dark:text-pink-400 border-pink-500/20" } },
-  { name: "C++ Bootcamp", issuer: "LetsUpgrade", role: "Bootcamp", logo: "https://www.google.com/s2/favicons?domain=letsupgrade.in&sz=128", st: { line: "bg-fuchsia-500/50 group-hover:bg-fuchsia-400", bg: "group-hover:bg-fuchsia-500/10 group-hover:border-fuchsia-500/20", txt: "group-hover:text-fuchsia-600 dark:group-hover:text-fuchsia-600 dark:text-fuchsia-400", badge: "bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-600 dark:text-fuchsia-400 border-fuchsia-500/20" } }
-];
+import { ALL_CERTIFICATES } from "@/data/certificates";
+import { PROJECTS } from "@/data/projects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -230,140 +202,33 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Project 1 */}
-            <div className="group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 dark:from-purple-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex bg-purple-500/10 text-purple-700 dark:text-purple-300 text-xs px-3 py-1 font-mono rounded-full border border-purple-500/20">Jan 2026</div>
-                  <div className="flex gap-3 items-center">
-                    <a href="https://gemini-llm-chat.streamlit.app/" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-purple-700 dark:hover:text-purple-600 dark:text-purple-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-purple-500/10 px-2 py-1 rounded-md border border-purple-500/20 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300">
-                      <ExternalLink className="w-3.5 h-3.5"/> Live Demo
-                    </a>
-                    <a href="https://github.com/AnuragGoyal007/GEMINI_LLM_CHATBOT" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-purple-700 dark:hover:text-purple-600 dark:text-purple-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 hover:border-purple-500/30">
-                      <Github className="w-3.5 h-3.5"/> Code
-                    </a>
+            {PROJECTS.map((project, index) => (
+              <div key={index} className={`group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] transition-all duration-500 hover:-translate-y-1 flex flex-col h-full ${project.theme.hoverBorder} ${project.colSpan || ''}`}>
+                <div className={`absolute inset-0 bg-gradient-to-br to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${project.theme.gradient}`} />
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-6">
+                    <div className={`flex text-xs px-3 py-1 font-mono rounded-full border ${project.theme.badge}`}>{project.date}</div>
+                    <div className="flex gap-3 items-center">
+                      <a href={project.demoLink} target="_blank" rel="noreferrer" className={`transition-colors flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded-md border text-slate-600 dark:text-slate-400 ${project.theme.demoBtn}`}>
+                        <ExternalLink className="w-3.5 h-3.5"/> Live Demo
+                      </a>
+                      <a href={project.codeLink} target="_blank" rel="noreferrer" className={`text-slate-600 dark:text-slate-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 ${project.theme.codeBtnHover}`}>
+                        <Github className="w-3.5 h-3.5"/> Code
+                      </a>
+                    </div>
+                  </div>
+                  <h3 className={`text-2xl font-bold text-slate-900 dark:text-white mb-3 transition-colors ${project.theme.titleHover}`}>{project.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tech.map((tech) => (
+                      <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
+                    ))}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-purple-700 dark:hover:text-purple-600 dark:text-purple-400 transition-colors">Gemini LLM Chatbot</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                  Secure Gemini-powered chatbot built with Streamlit leveraging user-provided API keys. An interactive platform allowing seamless connection to advanced LLMs.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Python", "Streamlit", "Gemini", "LLMs"].map((tech) => (
-                    <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
-                  ))}
-                </div>
               </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:border-blue-500/30 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 dark:from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex bg-blue-500/10 text-blue-700 dark:text-blue-300 text-xs px-3 py-1 font-mono rounded-full border border-blue-500/20">Feb 2026</div>
-                  <div className="flex gap-3 items-center">
-                    <a href="https://car-price-used-cardekho.streamlit.app/" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-600 dark:text-blue-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-blue-500/10 px-2 py-1 rounded-md border border-blue-500/20 hover:bg-blue-500/20 text-blue-700 dark:text-blue-300">
-                      <ExternalLink className="w-3.5 h-3.5"/> Live Demo
-                    </a>
-                    <a href="https://github.com/AnuragGoyal007/usedCar_price_prediction" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-blue-700 dark:hover:text-blue-600 dark:text-blue-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 hover:border-blue-500/30">
-                      <Github className="w-3.5 h-3.5"/> Code
-                    </a>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-700 dark:hover:text-blue-600 dark:text-blue-400 transition-colors">Used Car Price Prediction</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                  Machine Learning application predicting second-hand car values using Random Forest architecture. Integrated with an intuitive, interactive Streamlit frontend for user querying.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Machine Learning", "Random Forest", "Streamlit"].map((tech) => (
-                    <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:border-emerald-500/30 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 dark:from-emerald-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 text-xs px-3 py-1 font-mono rounded-full border border-emerald-500/20">Feb 2025 - May 2025</div>
-                  <div className="flex gap-3 items-center">
-                    <a href="#" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-600 dark:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-emerald-500/10 px-2 py-1 rounded-md border border-emerald-500/20 hover:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300">
-                      <ExternalLink className="w-3.5 h-3.5"/> Live Demo
-                    </a>
-                    <a href="#" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-600 dark:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 hover:border-emerald-500/30">
-                      <Github className="w-3.5 h-3.5"/> Code
-                    </a>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-emerald-700 dark:hover:text-emerald-600 dark:text-emerald-400 transition-colors">Savor&apos;e - Recipe Sharing Platform</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                  A full-stack web application built to explore, share, and manage recipes. Features user authentication, interactive frontend with like/comment system, advanced categorization (Veg/Non-Veg), and an admin dashboard for content moderation. Engineered securely without JS on frontend components.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Django", "SQLite", "HTML/CSS", "Python"].map((tech) => (
-                    <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Project 4 */}
-            <div className="group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:border-teal-500/30 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 dark:from-teal-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex bg-teal-500/10 text-teal-800 dark:text-teal-300 text-xs px-3 py-1 font-mono rounded-full border border-teal-500/20">Nov 2025</div>
-                  <div className="flex gap-3 items-center">
-                    <a href="#" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-teal-700 dark:hover:text-teal-600 dark:text-teal-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-teal-500/10 px-2 py-1 rounded-md border border-teal-500/20 hover:bg-teal-500/20 text-teal-800 dark:text-teal-300">
-                      <ExternalLink className="w-3.5 h-3.5"/> Live Demo
-                    </a>
-                    <a href="https://github.com/AnuragGoyal007/customer_behavior_analysis" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-teal-700 dark:hover:text-teal-600 dark:text-teal-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 hover:border-teal-500/30">
-                      <Github className="w-3.5 h-3.5"/> Code
-                    </a>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-teal-700 dark:hover:text-teal-600 dark:text-teal-400 transition-colors">Customer Shopping Behaviour Analysis</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                  A comprehensive data analytics project analyzing customer shopping behavior patterns. Implemented data cleaning, statistical analysis, and created interactive Power BI dashboards highlighting segmentation and purchasing trends for business decision-making.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["Python", "SQL", "Power BI", "Data Analysis"].map((tech) => (
-                    <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Project 5 */}
-            <div className="group relative bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] hover:border-rose-500/30 transition-all duration-500 hover:-translate-y-1 flex flex-col h-full md:col-span-2 lg:col-span-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-rose-500/10 dark:from-rose-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex bg-rose-500/10 text-rose-700 dark:text-rose-300 text-xs px-3 py-1 font-mono rounded-full border border-rose-500/20">Jun 2025</div>
-                  <div className="flex gap-3 items-center">
-                    <a href="https://personal-expense-tracker-pearl.vercel.app" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-rose-500/10 px-2 py-1 rounded-md border border-rose-500/20 hover:bg-rose-500/20 text-rose-700 dark:text-rose-300">
-                      <ExternalLink className="w-3.5 h-3.5"/> Live Demo
-                    </a>
-                    <a href="https://github.com/AnuragGoyal007/Personal_Expense_Tracker" target="_blank" rel="noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 transition-colors flex items-center gap-1.5 text-xs font-medium bg-slate-100 dark:bg-white/5 px-2 py-1 rounded-md border border-slate-200 dark:border-white/10 hover:border-rose-500/30">
-                      <Github className="w-3.5 h-3.5"/> Code
-                    </a>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 transition-colors">Personal Expense Tracker</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                  A personal financial management tool helping users track, categorize, and visualize their daily expenses. Built specifically with an interactive frontend to provide a seamless overview of personal finances.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {["HTML", "CSS", "JavaScript"].map((tech) => (
-                    <span key={tech} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-md text-slate-700 dark:text-slate-300">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </motion.section>
 
@@ -542,9 +407,9 @@ export default function Home() {
                     Industry Certifications
                   </h3>
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-1.5 bg-slate-800/50 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-700">28 Total Certifications</span>
-                    <span className="px-4 py-1.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 rounded-full text-sm font-medium">3 Microsoft Exams</span>
-                    <span className="px-4 py-1.5 bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 rounded-full text-sm font-medium">6 CalArts Specifications</span>
+                    <span className="px-4 py-1.5 bg-slate-800/50 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 border border-slate-700">{ALL_CERTIFICATES.length} Total Certifications</span>
+                    <span className="px-4 py-1.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 rounded-full text-sm font-medium">{ALL_CERTIFICATES.filter(c => c.issuer === 'Microsoft').length} Microsoft Exams</span>
+                    <span className="px-4 py-1.5 bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 rounded-full text-sm font-medium">{ALL_CERTIFICATES.filter(c => c.issuer === 'CalArts').length} CalArts Specifications</span>
                   </div>
                 </div>
               </div>
