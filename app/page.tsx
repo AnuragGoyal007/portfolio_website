@@ -639,7 +639,7 @@ export default function Home() {
                 <h4 className="text-lg font-medium text-slate-700 dark:text-slate-300 mb-3">Bachelor of Engineering - BE, CSE (AI)</h4>
                 
                 <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 text-sm font-medium border rounded-lg border-emerald-500/20 bg-emerald-500/10 text-emerald-800 dark:text-emerald-300">
-                  Grade: 8.27 CGPA (Till 3rd SEM)
+                  Grade: 8.59 CGPA
                 </div>
                 
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4 max-w-3xl">

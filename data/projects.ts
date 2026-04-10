@@ -37,7 +37,7 @@ export const PROJECTS = [
     title: "Savor'e - Recipe Sharing Platform",
     date: "Feb 2025 - May 2025",
     demoLink: "#",
-    codeLink: "https://github.com/AnuragGoyal007/G31_RecipeSharingPlatform_App",
+    codeLink: "https://github.com/AnuragGoyal007/G31_RecipeSharingPlatform_App ",
     description: "A full-stack web application built to explore, share, and manage recipes. Features user authentication, interactive frontend with like/comment system, advanced categorization (Veg/Non-Veg), and an admin dashboard for content moderation. Engineered securely without JS on frontend components.",
     tech: ["Django", "SQLite", "HTML/CSS", "Python"],
     colSpan: "",
