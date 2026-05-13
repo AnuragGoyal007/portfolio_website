@@ -83,5 +83,22 @@ export const PROJECTS = [
       codeBtnHover: "hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 hover:border-rose-500/30",
       titleHover: "group-hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400"
     }
+  },
+  {
+    title: "Invest Shield - Investment Risk Simulator",
+    date: "April 2026",
+    demoLink: "https://invest-shield.vercel.app/",
+    codeLink: "https://github.com/AnuragGoyal007/InvestShield",
+    description: "A web app that lets a young user build a virtual portfolio, watch it crash in historical market scenarios, get an AI explanation of why it happened, and see a live fear/risk meter — all before touching real money.",
+    tech: ["TypeScript", "Python", "SQLite"],
+    colSpan: "md:col-span-2 lg:col-span-1",
+    theme: {
+      hoverBorder: "hover:border-rose-500/30",
+      gradient: "from-rose-500/10 dark:from-rose-500/5",
+      badge: "bg-rose-500/10 text-rose-700 dark:text-rose-300 border-rose-500/20",
+      demoBtn: "hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 bg-rose-500/10 border-rose-500/20 hover:bg-rose-500/20 text-rose-700 dark:text-rose-300",
+      codeBtnHover: "hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400 hover:border-rose-500/30",
+      titleHover: "group-hover:text-rose-700 dark:hover:text-rose-600 dark:text-rose-400"
+    }
   }
 ];
