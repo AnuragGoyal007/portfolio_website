@@ -543,13 +543,13 @@ export default function Home() {
                 <div className="flex justify-center flex-grow py-4">
                   {/* Light Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&bg_color=00000000&hide_border=true&hide_title=true&text_color=475569&icon_color=2563eb&text_bold=false&rank_icon=github" 
+                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github" 
                     alt="Anurag's GitHub Stats" 
                     className="w-full max-w-[400px] object-contain block dark:hidden" 
                   />
                   {/* Dark Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&bg_color=00000000&hide_border=true&hide_title=true&text_color=94a3b8&icon_color=60a5fa&text_bold=false&rank_icon=github" 
+                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github" 
                     alt="Anurag's GitHub Stats" 
                     className="w-full max-w-[400px] object-contain hidden dark:block" 
                   />
@@ -568,13 +568,13 @@ export default function Home() {
                 <div className="flex justify-center flex-grow py-4">
                   {/* Light Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&bg_color=00000000&hide_border=true&hide_title=true&text_color=475569" 
+                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true" 
                     alt="Top Languages" 
                     className="w-full max-w-[350px] object-contain block dark:hidden" 
                   />
                   {/* Dark Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&bg_color=00000000&hide_border=true&hide_title=true&text_color=94a3b8" 
+                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true" 
                     alt="Top Languages" 
                     className="w-full max-w-[350px] object-contain hidden dark:block" 
                   />
@@ -594,13 +594,13 @@ export default function Home() {
                   <div className="min-w-[750px] flex justify-center py-2 px-4">
                     {/* Light Mode Variant */}
                     <img 
-                      src="https://ghchart.rshah.org/10b981/AnuragGoyal007" 
+                      src="https://ghchart.rshah.org/216e39/AnuragGoyal007" 
                       alt="GitHub Contributions" 
                       className="w-full object-contain block dark:hidden" 
                     />
                     {/* Dark Mode Variant */}
                     <img 
-                      src="https://ghchart.rshah.org/34d399/AnuragGoyal007" 
+                      src="/api/github-chart?username=AnuragGoyal007&color=39d353&emptyColor=161b22" 
                       alt="GitHub Contributions" 
                       className="w-full object-contain hidden dark:block drop-shadow-[0_0_12px_rgba(52,211,153,0.15)]" 
                     />
