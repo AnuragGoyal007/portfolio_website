@@ -39,7 +39,7 @@ export default function Navbar() {
           <a href="#experience" className="hover:text-slate-900 dark:hover:text-white transition-colors">Experience</a>
           <a href="#skills" className="hover:text-slate-900 dark:hover:text-white transition-colors">Skills</a>
           <a href="#certifications" className="hover:text-slate-900 dark:hover:text-white transition-colors">Certifications</a>
-          <a href="#github" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">GitHub</a>
+          <a href="#github" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">GitHub/LeetCode</a>
           <a href="#education" className="hover:text-slate-900 dark:hover:text-white transition-colors">Education</a>
           <a href="#contact" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact</a>
         </div>

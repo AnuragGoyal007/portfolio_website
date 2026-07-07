@@ -12,6 +12,9 @@ import { ChevronDown, Download, ExternalLink, MapPin, Mail, Phone, ChevronRight,
 import { ALL_CERTIFICATES } from "@/data/certificates";
 import { PROJECTS } from "@/data/projects";
 
+const GITHUB_USERNAME = "AnuragGoyal007"; // Update this to your GitHub username
+const LEETCODE_USERNAME = "anurag__2203"; // Update this to your LeetCode username
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [selectedIssuer, setSelectedIssuer] = useState<string>("All");
@@ -526,8 +529,8 @@ export default function Home() {
           <div className="flex items-center gap-3 mb-12">
             <div className="h-px w-12 bg-white/20"></div>
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
-              <Github className="w-7 h-7 text-slate-700 dark:text-slate-300" />
-              GitHub Activity
+              <Terminal className="w-7 h-7 text-slate-700 dark:text-slate-300" />
+              Coding Activity
             </h2>
           </div>
           
@@ -543,13 +546,13 @@ export default function Home() {
                 <div className="flex justify-center flex-grow py-4">
                   {/* Light Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github" 
+                    src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github`}
                     alt="Anurag's GitHub Stats" 
                     className="w-full max-w-[400px] object-contain block dark:hidden" 
                   />
                   {/* Dark Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api?username=AnuragGoyal007&show_icons=true&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github" 
+                    src={`https://github-readme-stats-eight-theta.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true&text_bold=false&rank_icon=github`}
                     alt="Anurag's GitHub Stats" 
                     className="w-full max-w-[400px] object-contain hidden dark:block" 
                   />
@@ -568,13 +571,13 @@ export default function Home() {
                 <div className="flex justify-center flex-grow py-4">
                   {/* Light Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true" 
+                    src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=github_light&bg_color=00000000&hide_border=true&hide_title=true`}
                     alt="Top Languages" 
                     className="w-full max-w-[350px] object-contain block dark:hidden" 
                   />
                   {/* Dark Mode Variant */}
                   <img 
-                    src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=AnuragGoyal007&layout=compact&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true" 
+                    src={`https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=github_dark&bg_color=00000000&hide_border=true&hide_title=true`}
                     alt="Top Languages" 
                     className="w-full max-w-[350px] object-contain hidden dark:block" 
                   />
@@ -588,21 +591,48 @@ export default function Home() {
               <div className="w-full relative z-10 flex flex-col">
                 <div className="flex items-center gap-2 mb-8 self-start">
                   <Layers className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">Contribution Graph</h3>
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">GitHub Contributions</h3>
                 </div>
                 <div className="w-full overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700 scrollbar-track-transparent">
                   <div className="min-w-[750px] flex justify-center py-2 px-4">
                     {/* Light Mode Variant */}
                     <img 
-                      src="https://ghchart.rshah.org/216e39/AnuragGoyal007" 
+                      src={`https://ghchart.rshah.org/216e39/${GITHUB_USERNAME}`}
                       alt="GitHub Contributions" 
                       className="w-full object-contain block dark:hidden" 
                     />
                     {/* Dark Mode Variant */}
                     <img 
-                      src="/api/github-chart?username=AnuragGoyal007&color=39d353&emptyColor=161b22" 
+                      src={`/api/github-chart?username=${GITHUB_USERNAME}&color=39d353&emptyColor=161b22`}
                       alt="GitHub Contributions" 
                       className="w-full object-contain hidden dark:block drop-shadow-[0_0_12px_rgba(52,211,153,0.15)]" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* LeetCode Stats & Activity Card */}
+            <div className="md:col-span-2 bg-slate-50 dark:bg-[#0a0f1c] border border-slate-200 dark:border-white/10 rounded-3xl p-8 hover:bg-slate-100 dark:hover:bg-white/[0.03] transition-all duration-300 shadow-sm flex flex-col items-center justify-center group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="w-full relative z-10 flex flex-col">
+                <div className="flex items-center gap-2 mb-8 self-start">
+                  <Brain className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200">LeetCode Stats & Activity</h3>
+                </div>
+                <div className="w-full overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-700 scrollbar-track-transparent">
+                  <div className="min-w-[750px] flex justify-center py-2 px-4">
+                    {/* Light Mode Variant */}
+                    <img 
+                      src={`https://leetcard.jacoblin.cool/${LEETCODE_USERNAME}?theme=light&font=Outfit&ext=heatmap`}
+                      alt="LeetCode Stats & Activity" 
+                      className="w-full max-w-[750px] object-contain block dark:hidden" 
+                    />
+                    {/* Dark Mode Variant */}
+                    <img 
+                      src={`https://leetcard.jacoblin.cool/${LEETCODE_USERNAME}?theme=dark&font=Outfit&ext=heatmap`}
+                      alt="LeetCode Stats & Activity" 
+                      className="w-full max-w-[750px] object-contain hidden dark:block drop-shadow-[0_0_12px_rgba(245,158,11,0.15)]" 
                     />
                   </div>
                 </div>
